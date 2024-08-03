@@ -18,3 +18,12 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Product {
+  createdAt   DateTime @default(now())
+  id          String   @id @default(cuid())
+  price       Float?
+  productId   String?
+  productName String?
+  updatedAt   DateTime @updatedAt
+}
